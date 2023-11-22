@@ -1,11 +1,12 @@
-# render.yaml
-version: 0.1
+version: 1
 
-# Configure le service web principal
 services:
   - type: web
     name: web
+    startCommand: npm start  
     envVars:
       - key: NODE_ENV
         value: production
     healthCheckPath: /
+    buildCommand: npm install && npm run build  
+    env: node12
