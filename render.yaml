@@ -19,7 +19,6 @@ builds:
         cmd: |
           # Commandes pour installer les dépendances de votre application
           npm install
-
       - name: Build
         cmd: |
           # Commandes pour construire votre application
