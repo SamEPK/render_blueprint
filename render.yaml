@@ -5,7 +5,8 @@ version: 0.1
 
 # Configure le service web principal
 services:
-  - name: web
+  - type: web  
+    name: web
     envVars:
       - key: NODE_ENV
         value: production
