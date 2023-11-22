@@ -3,10 +3,10 @@ version: 1
 services:
   - type: web
     name: web
-    startCommand: npm start  
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
     healthCheckPath: /
-    buildCommand: npm install && npm run build  
-    env: node12
+    buildCommand: npm install && npm run build
+    env: node
