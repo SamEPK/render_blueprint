@@ -1,30 +1,11 @@
 # render.yaml
-
-# Spécifie la version du fichier Render
 version: 0.1
 
 # Configure le service web principal
 services:
-  - type: web 
+  - type: web
     name: web
     envVars:
       - key: NODE_ENV
         value: production
     healthCheckPath: /
-    deploy:
-      - name: blueprintest
-        branch: main
-        dockerfile: Dockerfile
-
-# Configure les builds
-builds:
-  - name: blueprintest
-    steps:
-      - name: Install Dependencies
-        cmd: |
-          # Commandes pour installer les dépendances de votre application
-          npm install
-      - name: Build
-        cmd: |
-          # Commandes pour construire votre application
-          npm run build
